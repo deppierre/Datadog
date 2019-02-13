@@ -10,7 +10,7 @@ Lors de l’installation vous devrez passer en paramètre les paramètres suivan
 -	**TAGS** : ici il faut compléter les tags suivants :
     - **CLIENT** : CARMIGNAC
 
-### EXEMPLE
+#### EXEMPLE
 Voici la chaîne d’installation complète :
 ```
 datadog-agent-6-latest.amd64.msi /qn PROCESS_ENABLED=TRUE APM_ENABLED=FALSE HOSTNAME="<hostname>" TAGS="CLIENT:CARMIGNAC" APIKEY="<APIKEY>"
