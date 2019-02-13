@@ -1,8 +1,8 @@
 ## INSTALLATION & CONFIGURATION DE L’AGENT
-### TELECHARGEMENT DU PACKAGE
+## TELECHARGEMENT DU PACKAGE
 Il faut télécharger le paquet directement depuis la source, l’url est la suivante : https://s3.amazonaws.com/ddagent-windows-stable/datadog-agent-6-latest.amd64.msi 
 
-### ETAPE 1 : INSTALLATION
+## ETAPE 1 : INSTALLATION
 Lors de l’installation vous devrez passer en paramètre les paramètres suivants :
 -	**APIKEY** : [6750241e300506cae9d137fc27c156c5] Obligatoire, c’est la clé API de notre portail Datadog Easyteam.
 -	**PROCESS_ENABLED** : [TRUE] permet de scanner en temps réel les processus
@@ -16,7 +16,7 @@ Voici la chaîne d’installation complète :
 ```
 datadog-agent-6-latest.amd64.msi /qn PROCESS_ENABLED=TRUE APM_ENABLED=FALSE HOSTNAME="<hostname>" TAGS="CLIENT:CARMIGNAC" APIKEY="6750241e300506cae9d137fc27c156c5"
 ```
-### ETAPE 2 : CONFIGURATION
+## ETAPE 2 : CONFIGURATION
 Le répertoire d’installation de la conf de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**
 Il y a plusieurs fichiers à mettre à jour selon le périmètre applicatif
 
@@ -42,10 +42,10 @@ Déposer les fichiers suivants :
 
 Ensuite il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
 
-##### Cas 1 : Microsoft SQL Server
+## Cas 1 : Microsoft SQL Server
 Déposer le fichier suivant :
 `conf.d\sqlserver.d\conf.yaml`
-###### - Création d'un utilisateur
+### - Création d'un utilisateur
 ```sql
 USE MASTER
 CREATE LOGIN datadog WITH PASSWORD = 'Datadog123456789#', CHECK_POLICY= OFF;
@@ -53,15 +53,15 @@ CREATE USER datadog FOR LOGIN datadog;
 GRANT SELECT on sys.dm_os_performance_counters to datadog;
 GRANT VIEW SERVER STATE to datadog;
 ```
-###### - Modification de l'authentification
+### - Modification de l'authentification
 ```sql
 EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', N'Software\Microsoft\MSSQLServer\MSSQLServer', N'LoginMode', REG_DWORD, 2
 ```
-###### - REDEMARRAGE DE SQL SERVER
+### - REDEMARRAGE DE SQL SERVER
 Pour la prise en compte des modifications de paramètrage, il faut redémarrer l’instance SQL Server :
 ```powershell
 net stop MSSQLSERVER
 net start MSSQLSERVER
 ```
 
-##### Cas 2 : Contrôleur de domaines
+## Cas 2 : Contrôleur de domaines
