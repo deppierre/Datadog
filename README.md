@@ -1,4 +1,3 @@
-## INSTALLATION & CONFIGURATION DE L’AGENT
 ## TELECHARGEMENT DU PACKAGE
 Il faut télécharger le paquet directement depuis la source, l’url est la suivante : https://s3.amazonaws.com/ddagent-windows-stable/datadog-agent-6-latest.amd64.msi 
 
@@ -11,7 +10,7 @@ Lors de l’installation vous devrez passer en paramètre les paramètres suivan
 -	**TAGS** : ici il faut compléter les tags suivants :
     - **CLIENT** : CARMIGNAC
 
-#### EXEMPLE
+### EXEMPLE
 Voici la chaîne d’installation complète :
 ```
 datadog-agent-6-latest.amd64.msi /qn PROCESS_ENABLED=TRUE APM_ENABLED=FALSE HOSTNAME="<hostname>" TAGS="CLIENT:CARMIGNAC" APIKEY="6750241e300506cae9d137fc27c156c5"
@@ -20,7 +19,8 @@ datadog-agent-6-latest.amd64.msi /qn PROCESS_ENABLED=TRUE APM_ENABLED=FALSE HOST
 Le répertoire d’installation de la conf de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**
 Il y a plusieurs fichiers à mettre à jour selon le périmètre applicatif
 
-#### 1/ Prérequis obligatoire : datadog.yaml
+### 1/ Fichier datadog.yaml
+Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en rajoutant les lignes suivantes à la fin :
 ```yaml
 dd_url: https://app.datadoghq.eu
 log_level: warning
@@ -34,8 +34,8 @@ process_config:
   process_dd_url: https://process.datadoghq.eu
 ```
 
-#### 2/ Fichiers conf.yaml
-##### Cas obligatoire : Microsoft Windows Server
+### 2/ Fichiers conf.yaml
+#### Cas obligatoire : Microsoft Windows Server
 Déposer les fichiers suivants :
 ```conf.d\win32_event_log.d\conf.yaml```
 ```conf.d\wmi_check.d\conf.yaml```
