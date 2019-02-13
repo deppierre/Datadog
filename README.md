@@ -35,12 +35,14 @@ process_config:
 ```
 
 #### Fichiers conf.yaml
-Il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
 ##### Cas obligatoire : Microsoft Windows Server
 Déposer les fichiers suivants :
-`conf.d\win32_event_log.d\conf.yaml`
-`conf.d\wmi_check.d\conf.yaml`
-##### Cas 2 : Microsoft SQL Server
+``conf.d\win32_event_log.d\conf.yaml``
+``conf.d\wmi_check.d\conf.yaml``
+
+Ensuite il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
+
+##### Cas 1 : Microsoft SQL Server
 Déposer le fichier suivant :
 ```
 conf.d\sqlserver.d\conf.yaml
@@ -63,3 +65,5 @@ Pour la prise en compte des modifications de paramètrage, il faut redémarrer l
 net stop MSSQLSERVER
 net start MSSQLSERVER
 ```
+
+##### Cas 2 : Contrôleur de domaines
