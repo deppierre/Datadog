@@ -20,7 +20,7 @@ datadog-agent-6-latest.amd64.msi /qn PROCESS_ENABLED=TRUE APM_ENABLED=FALSE HOST
 Le répertoire d’installation de la conf de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**
 Il y a plusieurs à mettre fichiers à mettre à jour selon le périmètre applicatif
 
-##### Fichier 1 : Obligatoire : Fichier datadog.yaml
+##### Fichier obligatoire : Fichier datadog.yaml
 ```
 dd_url: https://app.datadoghq.eu
 log_level: warning
@@ -36,11 +36,16 @@ process_config:
 
 ##### Fichiers conf.yaml
 Il y a plusieurs fichiers de configuration à déposer selon le périmètre applicatif
-##### Microsoft Windows Server
+##### Cas 1 : Microsoft Windows Server
+Déposer le fichier suivant :
 ```
 conf.d\win32_event_log.d\conf.yaml
 ```
-
+##### Cas 2 : Microsoft SQL Server
+Déposer le fichier suivant :
+```
+conf.d\sqlserver.d\conf.yaml
+```
 ###### Création d'un utilisateur
 ```
 USE MASTER
@@ -53,12 +58,7 @@ GRANT VIEW SERVER STATE to datadog;
 ```
 EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', N'Software\Microsoft\MSSQLServer\MSSQLServer', N'LoginMode', REG_DWORD, 2
 ```
-##### Microsoft SQL Server
-```
-conf.d\sqlserver.d\conf.yaml
-```
-
-##### REDEMARRAGE DE SQL SERVER
+###### REDEMARRAGE DE SQL SERVER
 Pour la prise en compte des modifications de paramètrage, il faut redémarrer l’instance SQL Server :
 ```
 net stop MSSQLSERVER
