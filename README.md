@@ -37,8 +37,8 @@ process_config:
 #### 2/ Fichiers conf.yaml
 ##### Cas obligatoire : Microsoft Windows Server
 Déposer les fichiers suivants :
-``conf.d\win32_event_log.d\conf.yaml``
-``conf.d\wmi_check.d\conf.yaml``
+```conf.d\win32_event_log.d\conf.yaml```
+```conf.d\wmi_check.d\conf.yaml```
 
 Ensuite il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
 
