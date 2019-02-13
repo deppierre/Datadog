@@ -16,8 +16,7 @@ Voici la chaîne d’installation complète :
 datadog-agent-6-latest.amd64.msi /qn PROCESS_ENABLED=TRUE APM_ENABLED=FALSE HOSTNAME="<hostname>" TAGS="CLIENT:CARMIGNAC" APIKEY="![a link](https://easyteam.sharepoint.com/:t:/r/sites/easyshare/Documents%20partages/EMS/Support/DATADOG/api_key_carmignac.txt?csf=1&e=1AckAs)"
 ```
 ## ETAPE 2 : CONFIGURATION
-Le répertoire d’installation de la conf de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**
-Il y a plusieurs fichiers à mettre à jour selon le périmètre applicatif
+Le dossier racine (= root) d’installation de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**
 
 ### 1/ Fichier datadog.yaml
 Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en rajoutant les lignes suivantes à la fin :
@@ -36,10 +35,7 @@ process_config:
 
 ### 2/ Fichiers conf.yaml
 #### Cas obligatoire : Microsoft Windows Server
-Déposer les fichiers suivants :
-```conf.d\win32_event_log.d\conf.yaml```
-```conf.d\wmi_check.d\conf.yaml```
-
+Déposer les fichiers suivants : [conf.yaml](win32_event_log.d/conf.yaml) et [conf.yaml](wmi_check.d/conf.yaml)
 Ensuite il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
 
 ## Cas 1 : Microsoft SQL Server
