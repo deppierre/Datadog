@@ -3,7 +3,7 @@ Il faut télécharger le paquet directement depuis la source, l’url est la sui
 
 ## ETAPE 1 : INSTALLATION
 Lors de l’installation vous devrez passer en paramètre les paramètres suivants :
--	**APIKEY** : [URL](https://easyteam.sharepoint.com/:t:/r/sites/easyshare/Documents%20partages/EMS/Support/DATADOG/api_key_carmignac.txt?csf=1&e=1AckAs)  Obligatoire, c’est la clé API de notre portail Datadog Easyteam.
+-	**APIKEY** : Disponible [ICI](https://easyteam.sharepoint.com/:t:/r/sites/easyshare/Documents%20partages/EMS/Support/DATADOG/api_key_carmignac.txt?csf=1&e=1AckAs)  Obligatoire, c’est la clé API de notre portail Datadog Easyteam.
 -	**PROCESS_ENABLED** : [TRUE] permet de scanner en temps réel les processus
 -	**APM_ENABLED** : [FALSE]
 -	**HOSTNAME** : ici il faut préciser le hostname de l’hôte sur lequel va être installé l’agent
