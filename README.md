@@ -43,7 +43,7 @@ Déposer les fichiers suivants :
 Ensuite il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
 
 ## Cas 1 : Microsoft SQL Server
-Déposer le fichier suivant :
+Déposer le fichier suivant : [a workaround link](Datadog/blob/master/sqlserver.d/conf.yaml)
 `conf.d\sqlserver.d\conf.yaml`
 ### - Création d'un utilisateur
 ```sql
