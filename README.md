@@ -43,7 +43,7 @@ Déposer le fichier suivant : [conf.yaml](sqlserver.d/conf.yaml)
 ### - Création d'un utilisateur
 ```sql
 USE MASTER
-CREATE LOGIN datadog WITH PASSWORD = 'Datadog123456789#', CHECK_POLICY= OFF;
+CREATE LOGIN datadog WITH PASSWORD = '<password>, CHECK_POLICY= OFF;
 CREATE USER datadog FOR LOGIN datadog;
 GRANT SELECT on sys.dm_os_performance_counters to datadog;
 GRANT VIEW SERVER STATE to datadog;
