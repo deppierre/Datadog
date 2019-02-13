@@ -38,7 +38,7 @@ process_config:
 Déposer les fichiers suivants : [conf.yaml](win32_event_log.d/conf.yaml) et [conf.yaml](wmi_check.d/conf.yaml)
 Ensuite il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
 
-## Cas 1 : Microsoft SQL Server
+## Cas 1 : MSSQL
 Déposer le fichier suivant : [conf.yaml](sqlserver.d/conf.yaml)
 ### - Création d'un utilisateur
 ```sql
@@ -52,7 +52,7 @@ GRANT VIEW SERVER STATE to datadog;
 ```
 EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', N'Software\Microsoft\MSSQLServer\MSSQLServer', N'LoginMode', REG_DWORD, 2
 ```
-### - REDEMARRAGE DE SQL SERVER
+### - Redémarrage du moteur MSSQL
 Pour la prise en compte des modifications de paramètrage, il faut redémarrer l’instance SQL Server :
 ```
 net stop MSSQLSERVER
