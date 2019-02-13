@@ -3,7 +3,7 @@ Il faut télécharger le paquet directement depuis la source, l’url est la sui
 
 ## ETAPE 1 : INSTALLATION
 Lors de l’installation vous devrez passer en paramètre les paramètres suivants :
--	**APIKEY** : ![a link](https://easyteam.sharepoint.com/:t:/r/sites/easyshare/Documents%20partages/EMS/Support/DATADOG/api_key_carmignac.txt?csf=1&e=1AckAs)  Obligatoire, c’est la clé API de notre portail Datadog Easyteam.
+-	**APIKEY** : [URL](https://easyteam.sharepoint.com/:t:/r/sites/easyshare/Documents%20partages/EMS/Support/DATADOG/api_key_carmignac.txt?csf=1&e=1AckAs)  Obligatoire, c’est la clé API de notre portail Datadog Easyteam.
 -	**PROCESS_ENABLED** : [TRUE] permet de scanner en temps réel les processus
 -	**APM_ENABLED** : [FALSE]
 -	**HOSTNAME** : ici il faut préciser le hostname de l’hôte sur lequel va être installé l’agent
@@ -13,7 +13,7 @@ Lors de l’installation vous devrez passer en paramètre les paramètres suivan
 ### EXEMPLE
 Voici la chaîne d’installation complète :
 ```
-datadog-agent-6-latest.amd64.msi /qn PROCESS_ENABLED=TRUE APM_ENABLED=FALSE HOSTNAME="<hostname>" TAGS="CLIENT:CARMIGNAC" APIKEY="![a link](https://easyteam.sharepoint.com/:t:/r/sites/easyshare/Documents%20partages/EMS/Support/DATADOG/api_key_carmignac.txt?csf=1&e=1AckAs)"
+datadog-agent-6-latest.amd64.msi /qn PROCESS_ENABLED=TRUE APM_ENABLED=FALSE HOSTNAME="<hostname>" TAGS="CLIENT:CARMIGNAC" APIKEY="<APIKEY>"
 ```
 ## ETAPE 2 : CONFIGURATION
 Le dossier racine (= root) d’installation de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**
