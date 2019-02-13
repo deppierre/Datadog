@@ -3,7 +3,7 @@ Il faut télécharger le paquet directement depuis la source, l’url est la sui
 
 ## ETAPE 1 : INSTALLATION
 Lors de l’installation vous devrez passer en paramètre les paramètres suivants :
--	**APIKEY** : [6750241e300506cae9d137fc27c156c5] Obligatoire, c’est la clé API de notre portail Datadog Easyteam.
+-	**APIKEY** : ![alt text](https://easyteam.sharepoint.com/:t:/r/sites/easyshare/Documents%20partages/EMS/Support/DATADOG/api_key_carmignac.txt?csf=1&e=1AckAs)  Obligatoire, c’est la clé API de notre portail Datadog Easyteam.
 -	**PROCESS_ENABLED** : [TRUE] permet de scanner en temps réel les processus
 -	**APM_ENABLED** : [FALSE]
 -	**HOSTNAME** : ici il faut préciser le hostname de l’hôte sur lequel va être installé l’agent
@@ -54,12 +54,12 @@ GRANT SELECT on sys.dm_os_performance_counters to datadog;
 GRANT VIEW SERVER STATE to datadog;
 ```
 ### - Modification de l'authentification
-```sql
+```
 EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', N'Software\Microsoft\MSSQLServer\MSSQLServer', N'LoginMode', REG_DWORD, 2
 ```
 ### - REDEMARRAGE DE SQL SERVER
 Pour la prise en compte des modifications de paramètrage, il faut redémarrer l’instance SQL Server :
-```powershell
+```
 net stop MSSQLSERVER
 net start MSSQLSERVER
 ```
