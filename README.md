@@ -20,7 +20,7 @@ datadog-agent-6-latest.amd64.msi /qn PROCESS_ENABLED=TRUE APM_ENABLED=FALSE HOST
 Le répertoire d’installation de la conf de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**
 Il y a plusieurs fichiers à mettre à jour selon le périmètre applicatif
 
-##### Fichier obligatoire : Fichier datadog.yaml
+##### Fichier obligatoire : datadog.yaml
 ```
 dd_url: https://app.datadoghq.eu
 log_level: warning
