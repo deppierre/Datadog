@@ -21,7 +21,7 @@ Le répertoire d’installation de la conf de Datadog (sur Windows) est le suiva
 Il y a plusieurs fichiers à mettre à jour selon le périmètre applicatif
 
 #### 1/ Prérequis obligatoire : datadog.yaml
-```
+```yaml
 dd_url: https://app.datadoghq.eu
 log_level: warning
 apm_config:
@@ -54,12 +54,12 @@ GRANT SELECT on sys.dm_os_performance_counters to datadog;
 GRANT VIEW SERVER STATE to datadog;
 ```
 ###### - Modification de l'authentification
-```
+```sql
 EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', N'Software\Microsoft\MSSQLServer\MSSQLServer', N'LoginMode', REG_DWORD, 2
 ```
 ###### - REDEMARRAGE DE SQL SERVER
 Pour la prise en compte des modifications de paramètrage, il faut redémarrer l’instance SQL Server :
-```
+```powershell
 net stop MSSQLSERVER
 net start MSSQLSERVER
 ```
