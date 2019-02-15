@@ -171,15 +171,15 @@ use_v2_api:
   events: false
   series: false
   service_checks: false
-dd_url: https://10.2.0.5:3834
+dd_url: https://10.199.100.6:3834
 log_level: info
 apm_config:
   enabled: false
 logs_enabled: true
 logs_config:
-  logs_dd_url: 10.2.0.5:10514
+  logs_dd_url: 10.199.100.6:10514
   logs_no_ssl: true
 process_config:
   enabled: true
-  process_dd_url: https://10.2.0.5:3836
+  process_dd_url: https://10.199.100.6:3836
 skip_ssl_validation: true
