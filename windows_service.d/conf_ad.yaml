@@ -1,0 +1,12 @@
+---
+init_config:
+ 
+instances:
+    -   host: . # "." means the current host
+        services:
+          - DNS
+          - NTDS
+          - ADWS
+          - DFSR
+          - IsmServ
+          - Kdc

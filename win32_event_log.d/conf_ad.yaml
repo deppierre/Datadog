@@ -1,0 +1,102 @@
+---
+init_config:
+instances:
+  - log_file:
+      - DNS Server
+    tags:
+      - dnsserver
+      - os:windows
+    type:
+      - Warning
+      - Error
+ 
+  - log_file:
+      - Active Directory Web Services
+    tags:
+      - activedirectory_web_services
+      - os:windows
+    type:
+      - Warning
+      - Error
+  
+  - log_file:
+      - Directory Services
+    tags:
+      - activedirectory_directory_services
+      - os:windows
+    type:
+      - Warning
+      - Error
+  
+  - log_file:
+      - DFS Replication
+    tags:
+      - distributed_file_system_replication
+      - os:windows
+    type:
+      - Warning
+      - Error
+  
+  - log_file:
+      - Application
+    tags:
+      - os:windows
+    event_id:
+      - 1000
+      - 1002
+    type:
+      - Warning
+      - Error
+  
+  - log_file:
+      - Security
+    tags:
+      - os:windows
+    event_id:
+      - 4740
+      - 4728
+      - 4732
+      - 4735
+      - 4756
+      - 4625
+      - 4648
+    type:
+      - Audit Failure
+  
+  - log_file:
+      - System
+    tags:
+      - os:windows
+    event_id:
+      - 104
+      - 4719
+    type:
+      - Information
+  
+  - log_file:
+      - System
+    tags:
+      - os:windows
+    event_id:
+      - 41
+    type:
+      - Critical
+  
+  - log_file:
+      - System
+    tags:
+      - os:windows
+    event_id:
+      - 1001
+    type:
+      - Error
+  
+  - log_file:
+      - Microsoft-Windows-TaskScheduler/Operational
+    source_name:
+      - Microsoft-Windows-TaskScheduler
+    tags:
+      - os:windows
+    type:
+      - Warning
+      - Error

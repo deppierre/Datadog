@@ -34,7 +34,7 @@ process_config:
 ```
 
 ### 2/ Fichiers conf.yaml
-#### Cas obligatoire : Microsoft Windows Server
+## Cas général : Microsoft Windows Server
 Déposer les fichiers suivants : 
 - fichier [conf.yaml](win32_event_log.d/conf.yaml) pour remonter le contenu de event_viewer
 - fichier [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom
@@ -63,3 +63,7 @@ net start MSSQLSERVER
 ```
 
 ## Cas 2 : Contrôleurs de domaines
+Déposer les fichiers suivants : 
+ - [conf.yaml](active_directory.d/conf.yaml)
+ - [conf.yaml](win32_event_log.d/conf_ad.yaml)
+ - [conf.yaml](windows_service.d/conf_ad.yaml)
