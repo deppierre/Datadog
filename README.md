@@ -8,7 +8,7 @@ Lors de l’installation vous devrez passer en paramètre les paramètres suivan
 -	**APM_ENABLED** : [FALSE] licence non acquise
 -	**HOSTNAME** : ici il faut préciser le hostname de l’hôte sur lequel va être installé l’agent
 -	**TAGS** : ici il faut compléter les tags suivants :
-    - **CLIENT** : CARMIGNAC
+    - **CLIENT** : <nom du client>
 
 #### EXEMPLE
 Voici la chaîne d’installation complète :
