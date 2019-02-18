@@ -34,16 +34,16 @@ process_config:
 ```
 
 ### 2/ Fichiers conf.yaml
-## Cas général : Microsoft Windows Server
+#### Cas général : Microsoft Windows Server
 Déposer les fichiers suivants : 
 - fichier [conf.yaml](win32_event_log.d/conf.yaml) pour remonter le contenu de event_viewer
 - fichier [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom
 
 Ensuite il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
 
-## Cas 1 : MSSQL
+#### Cas 1 : MSSQL
 Déposer le fichier suivant : [conf.yaml](sqlserver.d/conf.yaml)
-### - Création d'un utilisateur
+##### - Création d'un utilisateur
 ```sql
 USE MASTER
 CREATE LOGIN datadog WITH PASSWORD = '<password>, CHECK_POLICY= OFF;
@@ -51,18 +51,18 @@ CREATE USER datadog FOR LOGIN datadog;
 GRANT SELECT on sys.dm_os_performance_counters to datadog;
 GRANT VIEW SERVER STATE to datadog;
 ```
-### - Modification de l'authentification
+##### - Modification de l'authentification
 ```
 EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', N'Software\Microsoft\MSSQLServer\MSSQLServer', N'LoginMode', REG_DWORD, 2
 ```
-### - Redémarrage du moteur MSSQL
+##### - Redémarrage du moteur MSSQL
 Pour la prise en compte des modifications de paramètrage, il faut redémarrer l’instance SQL Server :
 ```
 net stop MSSQLSERVER
 net start MSSQLSERVER
 ```
 
-## Cas 2 : Contrôleurs de domaines
+#### Cas 2 : Contrôleurs de domaines
 Déposer les fichiers suivants : 
  - conf Active Directory : [conf.yaml](active_directory.d/conf.yaml)
  - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_ad.yaml)
