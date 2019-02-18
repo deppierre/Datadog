@@ -64,6 +64,6 @@ net start MSSQLSERVER
 
 ## Cas 2 : Contrôleurs de domaines
 Déposer les fichiers suivants : 
- - [conf.yaml](active_directory.d/conf.yaml)
- - [conf.yaml](win32_event_log.d/conf_ad.yaml)
- - [conf.yaml](windows_service.d/conf_ad.yaml)
+ - conf Active Directory : [conf.yaml](active_directory.d/conf.yaml)
+ - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_ad.yaml)
+ - conf Service : [conf.yaml](windows_service.d/conf_ad.yaml)
