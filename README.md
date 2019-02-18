@@ -62,4 +62,4 @@ net stop MSSQLSERVER
 net start MSSQLSERVER
 ```
 
-## Cas 2 : Contrôleur de domaines
+## Cas 2 : Contrôleurs de domaines
