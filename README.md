@@ -19,19 +19,7 @@ datadog-agent-6-latest.amd64.msi /qn PROCESS_ENABLED=TRUE APM_ENABLED=FALSE HOST
 Le dossier racine (= root) d’installation de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**
 
 ### 1/ Fichier datadog.yaml
-Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en rajoutant les lignes suivantes à la fin :
-```yaml
-dd_url: https://app.datadoghq.eu
-log_level: warning
-apm_config:
-  enabled: false
-logs_enabled: true
-logs_config:
-  logs_dd_url: "agent-intake.logs.datadoghq.eu:443"
-process_config:
-  enabled: true
-  process_dd_url: https://process.datadoghq.eu
-```
+Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en écrasant son contenu par [datadog.yaml](datadog.yaml)
 
 ### 2/ Fichiers conf.yaml
 #### Cas général : Microsoft Windows Server
