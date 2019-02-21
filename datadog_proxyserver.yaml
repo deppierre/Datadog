@@ -91,7 +91,7 @@ histogram_copy_to_distribution: false
 histogram_copy_to_distribution_prefix: ""
 histogram_percentiles:
 - "0.95"
-hostname: PDEvm11
+hostname: ""
 hostname_fqdn: false
 hpa_configmap_name: datadog-custom-metrics
 hpa_watcher_gc_period: 300
@@ -124,7 +124,7 @@ leader_lease_duration: "60"
 log_enabled: false
 log_file: ""
 log_format_json: false
-log_level: info
+log_level: warning
 log_payloads: false
 log_to_console: true
 log_to_syslog: false
@@ -152,7 +152,6 @@ process_config:
 secret_backend_output_max_size: 1024
 secret_backend_timeout: 5
 server_timeout: 15
-skip_ssl_validation: false
 statsd_forward_host: ""
 statsd_forward_port: 0
 statsd_metric_namespace: ""
@@ -164,15 +163,12 @@ syslog_uri: ""
 tag_value_split_separator: {}
 tags:
 - CLIENT:CARMIGNAC
-- ENV:TEST
-- OSTYPE:WINDOWS
 use_dogstatsd: true
 use_v2_api:
   events: false
   series: false
   service_checks: false
 dd_url: https://10.199.100.6:3834
-log_level: info
 apm_config:
   enabled: false
 logs_enabled: true
