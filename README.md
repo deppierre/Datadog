@@ -13,7 +13,7 @@ Le dossier racine (= root) d’installation de Datadog (sur Windows) est le suiv
 
 ### 1/ Fichier datadog.yaml
 Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en écrasant son contenu par [datadog.yaml](datadog.yaml)
-Il faut modifier une ligne dans le fichier : `hostname: ""` en complétant avec le hostname de la VM concerné.
+Il faut modifier une ligne dans le fichier : `hostname: ""` en complétant avec le hostname de la VM concerné.  
 Par exemple : `hostname: "CGP-DEV-VM-POC1"`
 
 ### 2/ Fichiers conf.yaml
