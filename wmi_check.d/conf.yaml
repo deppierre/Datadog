@@ -6,7 +6,6 @@ instances:
     metrics:
       - [NumberOfProcesses, system.proc.count, gauge]
       - [NumberOfUsers, system.users.count, gauge]
-      - [Status, system.os.status, gauge]
 
 # Paging info
   - class: Win32_PerfFormattedData_PerfOS_Memory
