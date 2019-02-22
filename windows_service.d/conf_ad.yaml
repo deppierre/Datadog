@@ -2,7 +2,7 @@
 init_config:
  
 instances:
-    -   host: . # "." means the current host
+    -   host: .
         services:
           - DNS
           - NTDS
