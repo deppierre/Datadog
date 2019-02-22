@@ -50,3 +50,8 @@ Déposer les fichiers suivants :
  - conf Active Directory : [conf.yaml](active_directory.d/conf.yaml)
  - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_ad.yaml)
  - conf Service : [conf.yaml](windows_service.d/conf_ad.yaml)
+ 
+#### Cas 3 : Serveur Linux HAPROXY
+Déposer les fichiers suivants : 
+ - conf check TCP Datadog : [conf.yaml](tcp_check.d/conf.yaml)
+ - conf haproxy : [conf.yaml](haproxy.d/conf.yaml)
