@@ -2,19 +2,12 @@
 Il faut télécharger le paquet directement depuis la source, l’url est la suivante : https://s3.amazonaws.com/ddagent-windows-stable/datadog-agent-6-latest.amd64.msi 
 
 ## ETAPE 1 : INSTALLATION
-Lors de l’installation vous devrez passer en paramètre les paramètres suivants :
--	**APIKEY** : [ICI](https://easyteam.sharepoint.com/:t:/r/sites/easyshare/Documents%20partages/EMS/Support/DATADOG/api_key_carmignac.txt?csf=1&e=1AckAs) , obligatoire, c’est la clé API de notre portail Datadog Easyteam.
--	**PROCESS_ENABLED** : [TRUE] permet de scanner en temps réel les processus
--	**APM_ENABLED** : [FALSE] licence non acquise
--	**HOSTNAME** : ici il faut préciser le hostname de l’hôte sur lequel va être installé l’agent
--	**TAGS** : ici il faut compléter les tags suivants :
-    - **CLIENT** : nom du client
+Exécuter simplement le fichier :
+```
+datadog-agent-6-latest.amd64.msi /qn
+```
+La fichier de configuration sera écrasé plus loin
 
-#### EXEMPLE
-Voici la chaîne d’installation complète :
-```
-datadog-agent-6-latest.amd64.msi /qn PROCESS_ENABLED=TRUE APM_ENABLED=FALSE HOSTNAME="<hostname>" TAGS="CLIENT:CARMIGNAC" APIKEY="<APIKEY>"
-```
 ## ETAPE 2 : CONFIGURATION
 Le dossier racine (= root) d’installation de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**
 
