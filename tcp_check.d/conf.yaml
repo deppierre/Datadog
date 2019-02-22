@@ -10,7 +10,7 @@ instances:
     host: trace.agent.datadoghq.eu
     port: 443
     timeout: 5
-	
+
   - name: Proxy_Processes
     host: process.datadoghq.eu
     port: 443
