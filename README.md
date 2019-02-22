@@ -6,7 +6,7 @@ Exécuter simplement le fichier :
 ```
 datadog-agent-6-latest.amd64.msi /qn
 ```
-La fichier de configuration sera écrasé plus loin
+La fichier de configuration va maintenant être remplacé.
 
 ## ETAPE 2 : CONFIGURATION
 Le dossier racine (= root) d’installation de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**
