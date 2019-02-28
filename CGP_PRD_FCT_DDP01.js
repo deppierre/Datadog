@@ -7,7 +7,7 @@ const JSON_RECORDS = 'json-records';  // eventHubMessages = [{"records": [{}, {}
 const JSON_ARRAY = 'json-array';  // eventHubMessages = [{"key": "value"}, {"key": "value"}, ...]
 const INVALID = 'invalid';
 
-var DD_API_KEY = process.env.DD_API_KEY || 'cf31489fc99fba398e83b3fc36e791fd';
+var DD_API_KEY = process.env.DD_API_KEY || ''; //fetch the API KEY from Datadog
 var DD_URL = process.env.DD_URL || 'functions-intake.logs.datadoghq.eu';
 var DD_TAGS = process.env.DD_TAGS || 'CLIENT:CARMIGNAC';
 var DD_PORT = process.env.DD_PORT || 443;
