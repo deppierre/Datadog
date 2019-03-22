@@ -9,7 +9,10 @@ datadog-agent-6-latest.amd64.msi /qn
 La fichier de configuration va maintenant être remplacé.
 
 ## ETAPE 2 : CONFIGURATION
-Le dossier racine (= root) d’installation de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**
+Le dossier racine (= root) d’installation de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**  
+Nous allons mettre à jour deux types de fichier de configuration (=yaml) :
+- yaml lié à la configuration générale de l'agent Datadog, cf 2.1/
+- yaml liés aux différentes intégrations sur notre VM (MSSQL, AD, ...), cf 2.2/
 
 ### 2.1/ Fichier datadog.yaml
 Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en écrasant son contenu par [datadog.yaml](datadog.yaml)  
@@ -56,3 +59,9 @@ En complément de l'étape 2.2.1 déposez les fichiers suivants :
 Déposer les fichiers suivants : 
  - conf check TCP Datadog : [conf.yaml](tcp_check.d/conf.yaml)
  - conf haproxy : [conf.yaml](haproxy.d/conf.yaml)
+ 
+ ## ETAPE 3 : VERIFICATION
+Pour vérifier le statut des intégrations d'un agent local, ou pour vérifier le bon fonctionnement de l'agent en général, saisir la commande suivante dans .cmd
+```
+"C:\Program Files\Datadog\Datadog Agent\embedded\agent.exe" status
+```
