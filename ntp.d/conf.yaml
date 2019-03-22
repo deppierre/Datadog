@@ -1,0 +1,12 @@
+init_config:
+
+instances:
+
+  -
+    host: time.windows.com
+    #  - 1.europe.pool.ntp.org
+    #  - 2.europe.pool.ntp.org
+    #  - 3.europe.pool.ntp.org
+    port: ntp
+    # version: 3
+    # timeout: 5
