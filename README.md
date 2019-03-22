@@ -33,7 +33,7 @@ En complément de l'étape 2.2.1 déposez le fichier suivant : [conf.yaml](sqlse
 ##### - Création d'un utilisateur
 ```sql
 USE MASTER
-CREATE LOGIN datadog WITH PASSWORD = '<password>, CHECK_POLICY= OFF;
+CREATE LOGIN datadog WITH PASSWORD = '<password>', CHECK_POLICY= OFF;
 CREATE USER datadog FOR LOGIN datadog;
 GRANT SELECT on sys.dm_os_performance_counters to datadog;
 GRANT VIEW SERVER STATE to datadog;
