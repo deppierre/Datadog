@@ -65,3 +65,25 @@ Pour vérifier le statut des intégrations d'un agent local, ou pour vérifier l
 ```
 "C:\Program Files\Datadog\Datadog Agent\embedded\agent.exe" status
 ```
+Par exemple je veux vérifier ce qui est envoyé pour une intégration de type "MSSQL" :
+```
+    sqlserver (1.8.1)
+    -----------------
+      Instance ID: sqlserver:9967a41920590b6f [[32mOK[0m]
+      Total Runs: 166
+      Metric Samples: Last Run: 75, Total: 12,388
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 1, Total: 166
+      Average Execution Time : 1.116s
+
+      Instance ID: sqlserver:dbb08d75c0c639aa [[32mOK[0m]
+      Total Runs: 167
+      Metric Samples: Last Run: 57, Total: 9,475
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 1, Total: 167
+      Average Execution Time : 56ms
+```
+Je peux voir qu'il y a deux instances qui sont monitorés avec un statut "OK" et dans les deux cas l'agent remonte :
+- des métrics
+- aucun events
+- vérification du fonctionnement d'un service
