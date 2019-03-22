@@ -18,14 +18,15 @@ Par exemple : `hostname: "CGP-DEV-VM-POC1"`
 
 ### 2.2/ Fichiers conf.yaml
 #### 2.2.1 - Cas général : Microsoft Windows Server
-Déposer les fichiers suivants : 
+Ces fichiers de configuration sont la base de toutes les VM Windows Server :
 - fichier [conf.yaml](win32_event_log.d/conf.yaml) pour remonter le contenu de event_viewer
 - fichier [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom
+- fichier [conf.yaml](ntp.d/conf.yaml) pour se synchroniser avec le serveur temps de l'active directory
 
-Ensuite il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
+En complément il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
 
 #### 2.2.2 - MSSQL
-Déposer le fichier suivant : [conf.yaml](sqlserver.d/conf.yaml)
+En complément de l'étape 2.2.1 déposez le fichier suivant : [conf.yaml](sqlserver.d/conf.yaml)
 ##### - Création d'un utilisateur
 ```sql
 USE MASTER
@@ -46,9 +47,9 @@ net start MSSQLSERVER
 ```
 
 #### 2.2.3 - Contrôleurs de domaines
-Déposer les fichiers suivants : 
+En complément de l'étape 2.2.1 déposez les fichiers suivants : 
  - conf Active Directory : [conf.yaml](active_directory.d/conf.yaml)
- - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_ad.yaml)
+ - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
  - conf Service : [conf.yaml](windows_service.d/conf_ad.yaml)
  
 #### 2.2.4 - Serveur Linux HAPROXY
