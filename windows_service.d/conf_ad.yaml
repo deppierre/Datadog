@@ -10,3 +10,5 @@ instances:
           - DFSR
           - IsmServ
           - Kdc
+          - wmiApSrv
+          - LSM
