@@ -20,9 +20,9 @@ Ensuite il faut éditer la ligne suivante : `hostname: ""` en complétant avec l
 Par exemple : `hostname: "CGP-DEV-VM-POC1"`
 
 ### 2.2/ Fichiers conf.yaml
-#### 2.2.1 - Cas général : Microsoft Windows Server
+#### 2.2.1 - Cas par défaut : Microsoft Windows Server
 Ces fichiers de configuration sont la base de toutes les VM Windows Server :
-- fichier [conf.yaml](win32_event_log.d/conf.yaml) pour remonter le contenu de event_viewer
+- fichier [conf.yaml](win32_event_log.d/conf_default.yaml) pour remonter le contenu de event_viewer
 - fichier [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom
 - fichier [conf.yaml](ntp.d/conf.yaml) pour se synchroniser avec le serveur temps de l'active directory
 
