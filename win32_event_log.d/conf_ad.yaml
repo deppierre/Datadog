@@ -39,14 +39,10 @@ instances:
   
   - log_file:
       - Application
-    tags:
-      - os:windows
-    event_id:
-      - 1000
-      - 1002
     type:
-      - Warning
       - Error
+    tags:
+      - app
   
   - log_file:
       - Security
@@ -89,14 +85,4 @@ instances:
     event_id:
       - 1001
     type:
-      - Error
-  
-  - log_file:
-      - Microsoft-Windows-TaskScheduler/Operational
-    source_name:
-      - Microsoft-Windows-TaskScheduler
-    tags:
-      - os:windows
-    type:
-      - Warning
       - Error
