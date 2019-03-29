@@ -55,27 +55,10 @@ instances:
   - log_file:
       - System
     tags:
-      - os:windows
-    event_id:
-      - 104
-      - 4719
-    type:
-      - Information
-  
-  - log_file:
-      - System
-    tags:
-      - os:windows
-    event_id:
-      - 41
-    type:
-      - Critical
-  
-  - log_file:
-      - System
-    tags:
-      - os:windows
+      - system
     event_id:
       - 1001
-    type:
-      - Error
+      - 41
+      - 6008
+      - 1074
+      - 1076
