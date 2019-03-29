@@ -12,9 +12,6 @@ instances:
 
   - log_file:
       - System
-    type:
-      - Error
-      - Critical
     tags:
       - system
     event_id:
