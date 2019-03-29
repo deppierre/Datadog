@@ -15,9 +15,7 @@ Nous allons mettre à jour deux types de fichier de configuration (=yaml) :
 - yaml liés aux différentes intégrations sur notre VM (MSSQL, AD, ...), cf 2.2/
 
 ### 2.1/ Fichier datadog.yaml
-Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en écrasant son contenu par [datadog.yaml](datadog.yaml)  
-Ensuite il faut éditer la ligne suivante : `hostname: ""` en complétant avec le hostname de la VM concerné.  
-Par exemple : `hostname: "CGP-DEV-VM-POC1"`
+Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en écrasant son contenu par [datadog.yaml](datadog.yaml)
 
 ### 2.2/ Fichiers conf.yaml
 #### 2.2.1 - Cas par défaut : Microsoft Windows Server
