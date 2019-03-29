@@ -9,7 +9,7 @@ instances:
       - Warning
       - Error
       - Information
-	    - Critical
+      - Critical
     event_id:
       - 1001
       - 41
