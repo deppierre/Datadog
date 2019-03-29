@@ -36,14 +36,7 @@ instances:
     type:
       - Warning
       - Error
-  
-  - log_file:
-      - Application
-    type:
-      - Error
-    tags:
-      - app
-  
+ 
   - log_file:
       - Security
     tags:
