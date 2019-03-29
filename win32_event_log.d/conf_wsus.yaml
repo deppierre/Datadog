@@ -24,13 +24,6 @@ instances:
   - log_file:
       - Security
     type:
-      - Audit Failure
-    tags:
-      - audit_failure, security
-
-  - log_file:
-      - Security
-    type:
       - Information
     event_id:
       - 4740
