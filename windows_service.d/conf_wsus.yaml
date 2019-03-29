@@ -1,0 +1,10 @@
+---
+init_config:
+ 
+instances:
+    -   host: .
+        services:
+          - W3SVC
+          - WsusService           
+          - wmiApSrv
+          - LSM
