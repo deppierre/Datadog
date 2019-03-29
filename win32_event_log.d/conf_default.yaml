@@ -10,10 +10,10 @@ instances:
       - system
     event_id:
       - 1001
-	    - 41
-	    - 6008
-	    - 1074
-	    - 1076
+      - 41
+      - 6008
+      - 1074
+      - 1076
     
   - log_file:
       - Security
