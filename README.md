@@ -22,7 +22,7 @@ Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en écra
 Ces fichiers de configuration sont la base de toutes les VM Windows Server :
 - fichier [conf.yaml](win32_event_log.d/conf_default.yaml) pour remonter le contenu de event_viewer
 - fichier [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom
-- fichier [conf.yaml](ntp.d/conf.yaml) pour se synchroniser avec le serveur temps de l'active directory
+(ne pas déployer pour l'instant, cette conf pose problème) - fichier [conf.yaml](ntp.d/conf.yaml) pour se synchroniser avec le serveur temps de l'active directory
 
 En complément il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
 
