@@ -63,3 +63,9 @@ instances:
       - 1074
       - 1076
       - 7034
+logs:
+  - type: windows_event
+    channel_path: System
+    source: System
+    service: Events_System
+    sourcecategory: windowsevent
