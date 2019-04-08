@@ -1,0 +1,16 @@
+---
+- name: Installalation de Datadog
+  hosts: windows_datadog_agent
+
+  tasks:
+    - name: Installation du MSI
+      win_package:
+        path: https://s3.amazonaws.com/ddagent-windows-stable/datadog-agent-6-latest.amd64.msi
+        arguments: APIKEY="XXXXXXXXX"
+        product_id: DatadogAgent
+    - name: Mise a jour de datadog.yaml
+      win_copy:
+        src: /root/dev/EMS_SUP_Snippet/PDE_AWS_EC2/ressources/datadog.yaml
+        dest: C:\ProgramData\Datadog\datadog.yaml
+    - name: Redemarrage Datadog
+      win_shell: '"C:\\Program Files\\Datadog\\Datadog Agent\\embedded\\agent.exe" "restart-service"'
