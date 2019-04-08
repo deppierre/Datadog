@@ -93,5 +93,5 @@ Une solution a été trouvé en appelant l'API Datadog depuis Azure.
 Cette solution repose sur deux composants :
  - Azure Event hub : c'est un service de streaming qui permet de collecter des logs, les stocker et les mettre à disposition d'autres services qui seront les "consumers".  
  Le script d'installation des Hubs est [ici](scripts/deploy_event_hub.ps1)
- - Azure Function apps : ce service permet d'éxécuter du code sans serveur applicatif, appelé aussi "serverless". C'est en fait le "consumer" qui va venir lire les logs stockés dans un event hub pour les envoyer à Datadog.
+ - Azure Function apps : ce service permet d'éxécuter du code sans serveur applicatif, appelé aussi "serverless". C'est en fait le "consumer" qui va venir lire les logs stockés dans un event hub pour les envoyer à Datadog.  
  Le code source est [ici](CGP_PRD_FCT_DDP01.js)
