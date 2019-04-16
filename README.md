@@ -56,12 +56,18 @@ Déposez les fichiers suivants :
  - conf Active Directory : [conf.yaml](active_directory.d/conf.yaml)
  - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
  - conf Service : [conf.yaml](windows_service.d/conf_ad.yaml)
- - conf wmi : [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom  
+ - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)
  
 #### 2.2.4 - Serveur Linux HAPROXY
 Déposez les fichiers suivants : 
  - conf check TCP Datadog : [conf.yaml](tcp_check.d/conf.yaml)
  - conf haproxy : [conf.yaml](haproxy.d/conf.yaml)
+ 
+ #### 2.2.5 - Windows Server Update Services - Wsus
+Déposez les fichiers suivants : 
+ - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_wsus.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
+ - conf Service : [conf.yaml](windows_service.d/conf_wsus.yaml)
+ - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)
  
  ## ETAPE 3 : VERIFICATION
 Pour vérifier le statut des intégrations d'un agent local, ou pour vérifier le bon fonctionnement de l'agent en général, saisir la commande suivante dans .cmd
