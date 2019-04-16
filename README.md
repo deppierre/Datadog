@@ -19,7 +19,7 @@ Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en écra
 
 ### 2.2/ Fichiers conf.yaml
 #### 2.2.1 - Cas par défaut : Microsoft Windows Server
-Ces fichiers de configuration sont la base de toutes les VM Windows Server :
+Ces fichiers de configuration sont la base d'une VM "standard" :
 - fichier [conf.yaml](win32_event_log.d/conf_default.yaml) pour remonter le contenu de event_viewer
 - fichier [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom  
 ~~- fichier [conf.yaml](ntp.d/conf.yaml) pour se synchroniser avec le serveur temps de l'active directory~~
@@ -27,7 +27,10 @@ Ces fichiers de configuration sont la base de toutes les VM Windows Server :
 En complément il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
 
 #### 2.2.2 - MSSQL
-En complément de l'étape 2.2.1 déposez le fichier suivant : [conf.yaml](sqlserver.d/conf.yaml)
+Déposez les fichiers suivants : 
+ - conf sql server : [conf.yaml](sqlserver.d/conf.yaml)
+ - conf wmi : [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom 
+
 ##### - Création d'un utilisateur
 ```sql
 USE MASTER
@@ -48,13 +51,14 @@ net start MSSQLSERVER
 ```
 
 #### 2.2.3 - Contrôleurs de domaines
-En complément de l'étape 2.2.1 déposez les fichiers suivants : 
+Déposez les fichiers suivants : 
  - conf Active Directory : [conf.yaml](active_directory.d/conf.yaml)
  - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
  - conf Service : [conf.yaml](windows_service.d/conf_ad.yaml)
+ - conf wmi : [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom  
  
 #### 2.2.4 - Serveur Linux HAPROXY
-Déposer les fichiers suivants : 
+Déposez les fichiers suivants : 
  - conf check TCP Datadog : [conf.yaml](tcp_check.d/conf.yaml)
  - conf haproxy : [conf.yaml](haproxy.d/conf.yaml)
  
