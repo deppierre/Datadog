@@ -16,7 +16,7 @@ else
 fi
 
 #COLLECTE DES SUBSCRIPTIONS
-accList=`az account list --query "[?state=='Enabled'].{ subName: name, subId: id }" -o json`
+accList=`az account list --query "[?state=='Enabled'].{subName: name, subId: id}" -o json`
 accListMaxSize=`echo $accList | jq length`
 
 #ANALYE, ETAPE 1 : LES SUBSCRIPTIONS
