@@ -6,7 +6,7 @@ az account clear
 #CONNEXION
 echo "################################"
 echo "Connection with Azure ..."
-az login -u pierre.depretz@easyteam.fr -p PdZ0787# -o tsv
+az login -u pierre.depretz@easyteam.fr -p ###A_MODIFIER#### -o tsv
 if [ $? -eq 0 ]
 then
 	echo "Connection: OK"
