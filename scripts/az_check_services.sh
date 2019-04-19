@@ -6,7 +6,7 @@ az account clear
 #CONNEXION
 echo "################################"
 echo "Connection with Azure ..."
-az login -u pierre.depretz@easyteam.fr -p ###A_MODIFIER#### -o tsv
+az login -u pierre.depretz@easyteam.fr -p ///AMODIFIER/// -o tsv
 if [ $? -eq 0 ]
 then
 	echo "Connection: OK"
@@ -24,9 +24,8 @@ for ((i=0;i<$accListMaxSize;i++));
 do
 	echo "################################"
 	echo "Connection with subscription : $(echo $accList | jq -r '.['$i'] .subName')"
-	echo "..."
 	subId=`echo $accList | jq -r '.['$i'] .subId'`
-	az account set -s $subId
+	az account set -s $subId && echo "Running .."
 	
 	#COLLECTE DES VMs
 	vmList=`az vm list --show-details --query "[?powerState=='VM running' && storageProfile.osDisk.osType=='Windows'].{vmName: name, vmId: id, vmRg: resourceGroup}" -o json`
