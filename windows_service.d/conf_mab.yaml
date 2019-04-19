@@ -26,4 +26,3 @@ instances:
           - MSDPM
           - DPMAMService
           - DpmWriter
-          - DPMRA
