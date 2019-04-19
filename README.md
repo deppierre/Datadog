@@ -13,6 +13,7 @@ Le dossier racine (= root) d’installation de Datadog (sur Windows) est le suiv
 Nous allons mettre à jour deux types de fichier de configuration (=yaml) :
 - yaml lié à la configuration générale de l'agent Datadog, cf 2.1/
 - yaml liés aux différentes intégrations sur notre VM (MSSQL, AD, ...), cf 2.2/  
+
 **attention :** à chaque modification d'un fichier conf (.yaml), il faut redemarrer l'agent pour la prise en compte
 
 ### 2.1/ Fichier datadog.yaml
