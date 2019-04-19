@@ -71,6 +71,12 @@ Déposez les fichiers suivants :
  - conf Service : [conf.yaml](windows_service.d/conf_wsus.yaml)
  - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)
  
+  #### 2.2.6 - Microsoft Azure Backup - MAB
+Déposez les fichiers suivants : 
+ - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_mab.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
+ - conf Service : [conf.yaml](windows_service.d/conf_mab.yaml)
+ - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)
+ 
  ## ETAPE 3 : VERIFICATION
 Pour vérifier le statut des intégrations d'un agent local, ou pour vérifier le bon fonctionnement de l'agent en général, saisir la commande suivante dans .cmd
 ```
