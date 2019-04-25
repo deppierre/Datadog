@@ -117,6 +117,12 @@ Je peux voir qu'il y a deux instances qui sont monitorés avec un statut "OK" et
 - aucun events
 - vérification du fonctionnement d'un service
 
+Autre exemple : 
+```
+"C:\Program Files\Datadog\Datadog Agent\embedded\agent.exe" check custom_WinServMonitor
+```
+Permet de vérifier que l'intégration custom_WinServMonitor fonctionne correctement
+
 ### 2.3/ Supervision des services managés Azure (PaaS)
 #### 2.3.1 - Azure backup 
 Datadog ne propose pas nativement une supervision des backups générés dans Azure backup.  
