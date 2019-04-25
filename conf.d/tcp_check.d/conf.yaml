@@ -1,0 +1,22 @@
+init_config:
+
+instances:
+  - name: Proxy_Metrics
+    host: haproxy-app.agent.datadoghq.eu
+    port: 443
+    timeout: 5
+
+  - name: Proxy_Traces
+    host: trace.agent.datadoghq.eu
+    port: 443
+    timeout: 5
+
+  - name: Proxy_Processes
+    host: process.datadoghq.eu
+    port: 443
+    timeout: 5
+
+  - name: Proxy_Logs
+    host: agent-intake.logs.datadoghq.eu
+    port: 443
+    timeout: 5

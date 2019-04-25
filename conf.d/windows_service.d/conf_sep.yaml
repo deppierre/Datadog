@@ -1,0 +1,13 @@
+---
+init_config:
+ 
+instances:
+    -   host: .
+        services:
+          - SepMasterService
+          - semlaunchsrv
+          - semsrv
+          - semapisrv
+          - semwebsrv
+          - wmiApSrv
+          - LSM
