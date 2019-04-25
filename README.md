@@ -22,20 +22,20 @@ Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en écra
 ### 2.2/ Fichiers conf.yaml
 #### 2.2.1 - Cas par défaut : Microsoft Windows Server
 Ces fichiers de configuration sont la base d'une VM "standard" :
- - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_default.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
- - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)  
+ - conf Event Viewer : [conf.yaml](conf.d/win32_event_log.d/conf_default.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
+ - conf wmi : [conf.yaml](conf.d/wmi_check.d/conf.yaml)  
  - conf service : [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1)  
  - conf service : [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py)  
  - conf service : [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml)  
-~~- conf [conf.yaml](ntp.d/conf.yaml) pour se synchroniser avec le serveur temps de l'active directory~~
+~~- conf [conf.yaml](conf.d/ntp.d/conf.yaml) pour se synchroniser avec le serveur temps de l'active directory~~
 
 En complément il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
 
 #### 2.2.2 - MSSQL
 Déposez les fichiers suivants : 
  - conf sql server : [conf.yaml](sqlserver.d/conf.yaml)
- - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
- - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)
+ - conf Event Viewer : [conf.yaml](conf.d/win32_event_log.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
+ - conf wmi : [conf.yaml](conf.d/wmi_check.d/conf.yaml)
  - conf service : [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1)
  - conf service : [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py)
  - conf service : [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml)  
@@ -61,30 +61,30 @@ net start MSSQLSERVER
 
 #### 2.2.3 - Contrôleur de domaine
 Déposez les fichiers suivants : 
- - conf Active Directory : [conf.yaml](active_directory.d/conf.yaml)
- - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
- - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)
+ - conf Active Directory : [conf.yaml](conf.d/active_directory.d/conf.yaml)
+ - conf Event Viewer : [conf.yaml](conf.d/win32_event_log.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
+ - conf wmi : [conf.yaml](conf.d/wmi_check.d/conf.yaml)
  - conf service : [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1)
  - conf service : [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py)
  - conf service : [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml)  
  
 #### 2.2.4 - Serveur Linux HAPROXY
 Déposez les fichiers suivants : 
- - conf check TCP Datadog : [conf.yaml](tcp_check.d/conf.yaml)
- - conf haproxy : [conf.yaml](haproxy.d/conf.yaml)
+ - conf check TCP Datadog : [conf.yaml](conf.d/tcp_check.d/conf.yaml)
+ - conf haproxy : [conf.yaml](conf.d/haproxy.d/conf.yaml)
  
  #### 2.2.5 - Windows Server Update Services - Wsus
 Déposez les fichiers suivants : 
- - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_wsus.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
- - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)  
+ - conf Event Viewer : [conf.yaml](conf.d/win32_event_log.d/conf_wsus.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
+ - conf wmi : [conf.yaml](conf.d/wmi_check.d/conf.yaml)  
  - conf service : [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1)
  - conf service : [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py)
  - conf service : [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml)  
  
   #### 2.2.6 - Microsoft Azure Backup - MAB
 Déposez les fichiers suivants : 
- - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_mab.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
- - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)
+ - conf Event Viewer : [conf.yaml](conf.d/win32_event_log.d/conf_mab.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
+ - conf wmi : [conf.yaml](conf.d/wmi_check.d/conf.yaml)
  - conf service : [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1)  
  - conf service : [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py)   
  - conf service : [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml)  
