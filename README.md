@@ -11,8 +11,8 @@ La fichier de configuration va maintenant être remplacé.
 ## ETAPE 2 : CONFIGURATION
 Le dossier racine (= root) d’installation de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**  
 Nous allons mettre à jour deux types de fichier de configuration (=yaml) :
-- yaml lié à la configuration générale de l'agent Datadog, cf 2.1/
-- yaml liés aux différentes intégrations sur notre VM (MSSQL, AD, ...), cf 2.2/  
+ - conf lié à la configuration générale de l'agent Datadog, cf 2.1/
+ - conf liés aux différentes intégrations sur notre VM (MSSQL, AD, ...), cf 2.2/  
 
 **attention :** à chaque modification d'un fichier conf (.yaml), il faut redemarrer l'agent pour la prise en compte
 
@@ -22,17 +22,22 @@ Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en écra
 ### 2.2/ Fichiers conf.yaml
 #### 2.2.1 - Cas par défaut : Microsoft Windows Server
 Ces fichiers de configuration sont la base d'une VM "standard" :
-- fichier [conf.yaml](win32_event_log.d/conf_default.yaml) pour remonter le contenu de event_viewer
-- fichier [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom  
-- fichier [conf.yaml](windows_service.d/conf_mab.yaml) pour surveiller les services  
-~~- fichier [conf.yaml](ntp.d/conf.yaml) pour se synchroniser avec le serveur temps de l'active directory~~
+ - conf [conf.yaml](win32_event_log.d/conf_default.yaml) pour remonter le contenu de event_viewer
+ - conf [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom  
+ - conf [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1) fichier 1 pour superviser les services  
+ - conf [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py) fichier 2 pour superviser les services  
+ - conf [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml) fichier 3 pour superviser les services  
+~~- conf [conf.yaml](ntp.d/conf.yaml) pour se synchroniser avec le serveur temps de l'active directory~~
 
 En complément il y a un ou plusieurs fichiers de configuration à déposer selon le périmètre applicatif
 
 #### 2.2.2 - MSSQL
 Déposez les fichiers suivants : 
  - conf sql server : [conf.yaml](sqlserver.d/conf.yaml)
- - conf wmi : [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom 
+ - conf wmi : [conf.yaml](wmi_check.d/conf.yaml) pour remonter des métriques custom  
+ - conf [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1) fichier 1 pour superviser les services  
+ - conf [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py) fichier 2 pour superviser les services  
+ - conf [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml) fichier 3 pour superviser les services   
 
 ##### - Création d'un utilisateur
 ```sql
@@ -57,8 +62,10 @@ net start MSSQLSERVER
 Déposez les fichiers suivants : 
  - conf Active Directory : [conf.yaml](active_directory.d/conf.yaml)
  - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
- - conf Service : [conf.yaml](windows_service.d/conf_ad.yaml)
  - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)
+ - conf [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1) fichier 1 pour superviser les services  
+ - conf [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py) fichier 2 pour superviser les services  
+ - conf [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml) fichier 3 pour superviser les services  
  
 #### 2.2.4 - Serveur Linux HAPROXY
 Déposez les fichiers suivants : 
@@ -68,14 +75,18 @@ Déposez les fichiers suivants :
  #### 2.2.5 - Windows Server Update Services - Wsus
 Déposez les fichiers suivants : 
  - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_wsus.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
- - conf Service : [conf.yaml](windows_service.d/conf_wsus.yaml)
- - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)
+ - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)  
+ - conf [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1) fichier 1 pour superviser les services  
+ - conf [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py) fichier 2 pour superviser les services  
+ - conf [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml) fichier 3 pour superviser les services  
  
   #### 2.2.6 - Microsoft Azure Backup - MAB
 Déposez les fichiers suivants : 
  - conf Event Viewer : [conf.yaml](win32_event_log.d/conf_mab.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
- - conf Service : [conf.yaml](windows_service.d/conf_mab.yaml)
  - conf wmi : [conf.yaml](wmi_check.d/conf.yaml)
+ - conf [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1) fichier 1 pour superviser les services  
+ - conf [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py) fichier 2 pour superviser les services  
+ - conf [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml) fichier 3 pour superviser les services  
  
  ## ETAPE 3 : VERIFICATION
 Pour vérifier le statut des intégrations d'un agent local, ou pour vérifier le bon fonctionnement de l'agent en général, saisir la commande suivante dans .cmd
