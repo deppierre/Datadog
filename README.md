@@ -133,7 +133,7 @@ Autre exemple :
 ```
 "C:\Program Files\Datadog\Datadog Agent\embedded\agent.exe" check custom_WinServMonitor
 ```
-Permet de vérifier que l'intégration custom_WinServMonitor fonctionne correctement
+Permet de vérifier que l'intégration [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml) fonctionne correctement
 
 ### 2.3/ Supervision des services managés Azure (PaaS)
 #### 2.3.1 - Azure backup 
