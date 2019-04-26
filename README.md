@@ -11,7 +11,7 @@ La fichier de configuration va maintenant être remplacé.
 ## ETAPE 2 : CONFIGURATION
 Le dossier racine (= root) d’installation de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**  
 Nous allons mettre à jour deux types de fichier de configuration (=yaml) :
- - conf lié à la configuration générale de l'agent Datadog, cf 2.1/
+ - [conf](datadog.yaml) liée à la configuration générale de l'agent Datadog, cf 2.1/
  - conf liés aux différentes intégrations sur notre VM (MSSQL, AD, ...), cf 2.2/  
 
 **attention :** à chaque modification d'un fichier conf (.yaml), il faut redemarrer l'agent pour la prise en compte
