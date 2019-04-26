@@ -18,9 +18,5 @@ class Custom_WinServMonitorCheck(AgentCheck):
 		if output.startswith('OK'):
 			self.gauge('custom_WinServMonitor.autoNotStarted', 0)
 		else:
-			outList=[]
 			for service in output.split(';'):
-				service = service.strip()
-				outList.append('service:'+service)
-			self.gauge('custom_WinServMonitor.autoNotStarted', 1, outList)
-			
+				self.gauge('custom_WinServMonitor.autoNotStarted', 1, ['service:'+service.strip()])
