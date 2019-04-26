@@ -1,5 +1,7 @@
 # List of Services to Ignore. 
-$Ignore=@( 
+$Ignore=@(
+    'Downloaded Maps Manager',
+    'IaasVmProvider',
     'Microsoft .NET Framework NGEN v4.0.30319_X64', 
     'Microsoft .NET Framework NGEN v4.0.30319_X86', 
     'Multimedia Class Scheduler', 
@@ -13,7 +15,7 @@ $Ignore=@(
 $pattern = "has not registered for any start or stop triggers"
 $flag = $false
 # Get list of services that are not running, not in the ignore list and set to automatic 
-$Services=Get-WmiObject Win32_Service | Where {$_.StartMode -eq 'Auto' -and $Ignore -notcontains $_.DisplayName -and $_.State -ne 'Running'} 
+$Services=Get-WmiObject Win32_Service -Filter "NOT DisplayName like 'Sync Host%'" | Where {$_.StartMode -eq 'Auto' -and $Ignore -notcontains $_.DisplayName -and $_.State -ne 'Running'} 
  
 # If any services were found fitting the above description... 
 if ($Services) {
