@@ -47,8 +47,8 @@
 
 # List of Services to Ignore. 
 $Ignore=@(
-#    'Downloaded Maps Manager',
-#    'IaasVmProvider',
+    'Downloaded Maps Manager',
+    'IaasVmProvider',
     'Microsoft .NET Framework NGEN v4.0.30319_X64', 
     'Microsoft .NET Framework NGEN v4.0.30319_X86', 
     'Multimedia Class Scheduler', 
