@@ -12,7 +12,7 @@ La fichier de configuration va maintenant être remplacé.
 Le dossier racine (= root) d’installation de Datadog (sur Windows) est le suivant : **C:\ProgramData\Datadog**  
 Nous allons mettre à jour deux types de fichier de configuration (=yaml) :
  - [conf](datadog.yaml) liée à la configuration générale de l'agent Datadog, cf 2.1/
- - conf liés aux différentes intégrations sur notre VM (MSSQL, AD, ...), cf 2.2/  
+ - conf liées aux différentes intégrations sur notre VM (MSSQL, AD, ...), cf 2.2/  
 
 **attention :** à chaque modification d'un fichier conf (.yaml), il faut redemarrer l'agent pour la prise en compte
 
@@ -64,7 +64,7 @@ Déposer les fichiers suivants :
  - conf Active Directory : [conf.yaml](conf.d/active_directory.d/conf.yaml)
  - conf Event Viewer : [conf.yaml](conf.d/win32_event_log.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
  - conf wmi : [conf.yaml](conf.d/wmi_check.d/conf.yaml)
- - conf script : [conf.yaml](conf.d/windows_service.d/conf_ad.yaml)
+ - conf script : [conf.yaml](conf.d/windows_service.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
  - conf script client : [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1)
  - conf script client : [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py)
  - conf script client : [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml)  
