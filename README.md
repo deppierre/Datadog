@@ -64,7 +64,7 @@ Déposer les fichiers suivants :
  - conf Active Directory : [conf.yaml](conf.d/active_directory.d/conf.yaml)
  - conf Event Viewer : [conf.yaml](conf.d/win32_event_log.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
  - conf wmi : [conf.yaml](conf.d/wmi_check.d/conf.yaml)
- - conf script : [conf.yaml](conf.d/windows_service.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
+ - conf service : [conf.yaml](conf.d/windows_service.d/conf_ad.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
  - conf script client : [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1)
  - conf script client : [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py)
  - conf script client : [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml)  
@@ -78,7 +78,7 @@ Déposer les fichiers suivants :
 Déposer les fichiers suivants : 
  - conf Event Viewer : [conf.yaml](conf.d/win32_event_log.d/conf_wsus.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
  - conf wmi : [conf.yaml](conf.d/wmi_check.d/conf.yaml)  
- - conf script : [conf.yaml](conf.d/windows_service.d/conf_wsus.yaml)
+ - conf service : [conf.yaml](conf.d/windows_service.d/conf_wsus.yaml)
  - conf script client : [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1)
  - conf script client : [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py)
  - conf script client : [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml)  
@@ -87,7 +87,7 @@ Déposer les fichiers suivants :
 Déposer les fichiers suivants : 
  - conf Event Viewer : [conf.yaml](conf.d/win32_event_log.d/conf_mab.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
  - conf wmi : [conf.yaml](conf.d/wmi_check.d/conf.yaml)
- - conf script : [conf.yaml](conf.d/windows_service.d/conf_mab.yaml)
+ - conf service : [conf.yaml](conf.d/windows_service.d/conf_mab.yaml)
  - conf script client : [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1)  
  - conf script client : [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py)   
  - conf script client : [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml)  
@@ -96,7 +96,7 @@ Déposer les fichiers suivants :
 Déposer les fichiers suivants : 
  - conf Event Viewer : [conf.yaml](conf.d/win32_event_log.d/conf_default.yaml) (il doit être renommé en conf.yaml pour être pris en compte)
  - conf wmi : [conf.yaml](conf.d/wmi_check.d/conf.yaml)
- - conf script : [conf.yaml](conf.d/windows_service.d/conf_sep.yaml)
+ - conf service : [conf.yaml](conf.d/windows_service.d/conf_sep.yaml)
  - conf script client : [custom_WinServMonitor.ps1](checks.d/custom_WinServMonitor.ps1)  
  - conf script client : [custom_WinServMonitor.py](checks.d/custom_WinServMonitor.py)   
  - conf script client : [custom_WinServMonitor.yaml](conf.d/custom_WinServMonitor.yaml) 
