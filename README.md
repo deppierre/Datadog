@@ -91,9 +91,9 @@ Déposer les fichiers suivants :
  
 #### 2.2.7 - Symantec Endpoint Protection - SEP
 Déposer les fichiers suivants : 
- - conf Event Viewer : [conf.yaml](agent_datadog/conf.d/sep/win32_event_log.d/conf_default.yaml)
+ - conf Event Viewer : [conf.yaml](agent_datadog/conf.d/sep/win32_event_log.d/conf.yaml)
  - conf wmi : [conf.yaml](agent_datadog/conf.d/sep/wmi_check.d/conf.yaml)
- - conf service : [conf.yaml](agent_datadog/conf.d/sep/windows_service.d/conf_sep.yaml)
+ - conf service : [conf.yaml](agent_datadog/conf.d/sep/windows_service.d/conf.yaml)
  - conf script client : [custom_WinServMonitor.ps1](agent_datadog/checks.d/custom_WinServMonitor.ps1)  
  - conf script client : [custom_WinServMonitor.py](agent_datadog/checks.d/custom_WinServMonitor.py)   
  - conf script client : [custom_WinServMonitor.yaml](agent_datadog/conf.d/sep/custom_WinServMonitor.yaml) 
