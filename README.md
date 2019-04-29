@@ -132,8 +132,8 @@ Autre exemple :
 ```
 Permet de vérifier que l'intégration [custom_WinServMonitor.yaml](agent_datadog/conf.d/sep/custom_WinServMonitor.yaml) fonctionne correctement
 
-### 2.3/ Supervision des services managés Azure (PaaS)
-#### 2.3.1 - Azure backup 
+## SUPERVISION SUR AZURE PaaS
+#### 1.1 - Azure backup 
 Datadog ne propose pas nativement une supervision des backups générés dans Azure backup.  
 Une solution a été trouvé en appelant l'API Datadog depuis Azure.  
 Cette solution repose sur deux composants :
