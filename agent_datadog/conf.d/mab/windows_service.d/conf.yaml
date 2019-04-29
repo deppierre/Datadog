@@ -1,0 +1,11 @@
+---
+init_config:
+ 
+instances:
+    -   host: .
+        services:
+          - MSDPM
+          - DPMAMService
+          - DpmWriter           
+          - wmiApSrv
+          - LSM
