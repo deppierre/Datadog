@@ -1,6 +1,31 @@
+@@ -0,0 +1,53 @@
 ---
 init_config:
 instances:
+  - log_file:
+      - DPM Backups Events
+    tags:
+      - DPM Backups Events
+      - os:windows
+    type:
+      - Warning
+      - Error
+  
+  - log_file:
+      - Security
+    tags:
+      - os:windows
+    event_id:
+      - 4740
+      - 4728
+      - 4732
+      - 4735
+      - 4756
+      - 4625
+      - 4648
+    type:
+      - Audit Failure
+  
   - log_file:
       - System
     tags:
@@ -12,19 +37,6 @@ instances:
       - 1074
       - 1076
       - 7034
-
-  - log_file:
-      - Security
-    type:
-      - Information
-    event_id:
-      - 4740
-      - 4728
-      - 4732
-      - 4735
-      - 4756
-      - 4625
-      - 4648
 logs:
   - type: windows_event
     channel_path: System
