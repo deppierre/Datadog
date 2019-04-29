@@ -23,6 +23,3 @@ instances:
         services:
           - wmiApSrv
           - LSM
-          - MSDPM
-          - DPMAMService
-          - DpmWriter
