@@ -1,5 +1,5 @@
 ## TELECHARGEMENT DU PACKAGE
-Il faut télécharger le paquet directement depuis la source, l’url est la suivante : https://s3.amazonaws.com/ddagent-windows-stable/datadog-agent-6-latest.amd64.msi 
+Il faut télécharger le paquet directement depuis la source, l’url est [ICI](https://s3.amazonaws.com/ddagent-windows-stable/datadog-agent-6-latest.amd64.msi)  
 
 ## ETAPE 1 : INSTALLATION
 Exécuter simplement le fichier :
