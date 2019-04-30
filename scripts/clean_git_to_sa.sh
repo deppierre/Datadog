@@ -1,6 +1,6 @@
 #!/bin/sh
 
-azSAKey="<a completer>"
+azSAKey="DefaultEndpointsProtocol=https;AccountName=cgghubdgconf01;AccountKey=zq/mRQumKZe/p5aUavFs23nvx/XdGhlXNT7KdH23yDEChN25d7PyodBDYGgp//ZmdjJztHrS3dWnBGucSgJnGQ==;EndpointSuffix=core.windows.net"
 ddShare="datadog"
 ddDir="TestPierre"
 
