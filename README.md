@@ -22,20 +22,20 @@ Il faut mettre à jour le fichier `C:\ProgramData\Datadog\datadog.yaml` en écra
 ### 2.2/ Fichiers conf.yaml
 #### 2.2.1 - Cas par défaut : Microsoft Windows Server
 Ces fichiers de configuration sont la base d'une VM "standard" :
- - conf Event Viewer : [conf.yaml](agent_datadog/conf.d/default/win32_event_log.d/conf.yaml)
- - conf wmi : [conf.yaml](agent_datadog/conf.d/default/wmi_check.d/conf.yaml)  
+ - conf Event Viewer : [conf.yaml](agent_datadog/default/win32_event_log.d/conf.yaml)
+ - conf wmi : [conf.yaml](agent_datadog/default/wmi_check.d/conf.yaml)  
  - conf script client : [custom_WinServMonitor.ps1](agent_datadog/checks.d/custom_WinServMonitor.ps1)  
  - conf script client : [custom_WinServMonitor.py](agent_datadog/checks.d/custom_WinServMonitor.py)  
- - conf script client : [custom_WinServMonitor.yaml](agent_datadog/conf.d/default/custom_WinServMonitor.yaml)  
+ - conf script client : [custom_WinServMonitor.yaml](agent_datadog/default/custom_WinServMonitor.yaml)  
 
 #### 2.2.2 - MSSQL
 Déposer les fichiers suivants : 
- - conf sql server : [conf.yaml](agent_datadog/conf.d/sqlserver/sqlserver.d/conf.yaml)
- - conf Event Viewer : [conf.yaml](agent_datadog/conf.d/sqlserver/win32_event_log.d/conf.yaml)
- - conf wmi : [conf.yaml](agent_datadog/conf.d/sqlserver/wmi_check.d/conf.yaml)
+ - conf sql server : [conf.yaml](agent_datadog/sqlserver/sqlserver.d/conf.yaml)
+ - conf Event Viewer : [conf.yaml](agent_datadog/sqlserver/win32_event_log.d/conf.yaml)
+ - conf wmi : [conf.yaml](agent_datadog/sqlserver/wmi_check.d/conf.yaml)
  - conf script client : [custom_WinServMonitor.ps1](agent_datadog/checks.d/custom_WinServMonitor.ps1)
  - conf script client : [custom_WinServMonitor.py](agent_datadog/checks.d/custom_WinServMonitor.py)
- - conf script client : [custom_WinServMonitor.yaml](agent_datadog/conf.d/sqlserver/custom_WinServMonitor.yaml)  
+ - conf script client : [custom_WinServMonitor.yaml](agent_datadog/sqlserver/custom_WinServMonitor.yaml)  
 
 ##### - Création d'un utilisateur
 ```sql
@@ -58,13 +58,13 @@ net start MSSQLSERVER
 
 #### 2.2.3 - Contrôleur de domaine
 Déposer les fichiers suivants : 
- - conf Active Directory : [conf.yaml](agent_datadog/conf.d/active_directory/active_directory.d/conf.yaml)
- - conf Event Viewer : [conf.yaml](agent_datadog/conf.d/active_directory/win32_event_log.d/conf.yaml)
- - conf wmi : [conf.yaml](agent_datadog/conf.d/active_directory/wmi_check.d/conf.yaml)
- - conf service : [conf.yaml](agent_datadog/conf.d/active_directory/windows_service.d/conf.yaml)
+ - conf Active Directory : [conf.yaml](agent_datadog/active_directory/active_directory.d/conf.yaml)
+ - conf Event Viewer : [conf.yaml](agent_datadog/active_directory/win32_event_log.d/conf.yaml)
+ - conf wmi : [conf.yaml](agent_datadog/active_directory/wmi_check.d/conf.yaml)
+ - conf service : [conf.yaml](agent_datadog/active_directory/windows_service.d/conf.yaml)
  - conf script client : [custom_WinServMonitor.ps1](agent_datadog/checks.d/custom_WinServMonitor.ps1)
  - conf script client : [custom_WinServMonitor.py](agent_datadog/checks.d/custom_WinServMonitor.py)
- - conf script client : [custom_WinServMonitor.yaml](agent_datadog/conf.d/active_directory/custom_WinServMonitor.yaml)  
+ - conf script client : [custom_WinServMonitor.yaml](agent_datadog/active_directory/custom_WinServMonitor.yaml)  
  
 #### 2.2.4 - Serveur Linux HAPROXY
 Déposer les fichiers suivants : 
@@ -73,30 +73,30 @@ Déposer les fichiers suivants :
  
 #### 2.2.5 - Windows Server Update Services - WSUS
 Déposer les fichiers suivants : 
- - conf Event Viewer : [conf.yaml](agent_datadog/conf.d/wsus/win32_event_log.d/conf.yaml)
- - conf wmi : [conf.yaml](agent_datadog/conf.d/wsus/wmi_check.d/conf.yaml)  
- - conf service : [conf.yaml](agent_datadog/conf.d/wsus/windows_service.d/conf.yaml)
+ - conf Event Viewer : [conf.yaml](agent_datadog/wsus/win32_event_log.d/conf.yaml)
+ - conf wmi : [conf.yaml](agent_datadog/wsus/wmi_check.d/conf.yaml)  
+ - conf service : [conf.yaml](agent_datadog/wsus/windows_service.d/conf.yaml)
  - conf script client : [custom_WinServMonitor.ps1](agent_datadog/checks.d/custom_WinServMonitor.ps1)
  - conf script client : [custom_WinServMonitor.py](agent_datadog/checks.d/custom_WinServMonitor.py)
- - conf script client : [custom_WinServMonitor.yaml](agent_datadog/conf.d/wsus/custom_WinServMonitor.yaml)  
+ - conf script client : [custom_WinServMonitor.yaml](agent_datadog/wsus/custom_WinServMonitor.yaml)  
  
 #### 2.2.6 - Microsoft Azure Backup - MAB
 Déposer les fichiers suivants : 
- - conf Event Viewer : [conf.yaml](agent_datadog/conf.d/mab/win32_event_log.d/conf.yaml)
- - conf wmi : [conf.yaml](agent_datadog/conf.d/mab/wmi_check.d/conf.yaml)
- - conf service : [conf.yaml](agent_datadog/conf.d/mab/windows_service.d/conf.yaml)
+ - conf Event Viewer : [conf.yaml](agent_datadog/mab/win32_event_log.d/conf.yaml)
+ - conf wmi : [conf.yaml](agent_datadog/mab/wmi_check.d/conf.yaml)
+ - conf service : [conf.yaml](agent_datadog/mab/windows_service.d/conf.yaml)
  - conf script client : [custom_WinServMonitor.ps1](agent_datadog/checks.d/custom_WinServMonitor.ps1)  
  - conf script client : [custom_WinServMonitor.py](agent_datadog/checks.d/custom_WinServMonitor.py)   
- - conf script client : [custom_WinServMonitor.yaml](agent_datadog/conf.d/mab/custom_WinServMonitor.yaml)  
+ - conf script client : [custom_WinServMonitor.yaml](agent_datadog/mab/custom_WinServMonitor.yaml)  
  
 #### 2.2.7 - Symantec Endpoint Protection - SEP
 Déposer les fichiers suivants : 
- - conf Event Viewer : [conf.yaml](agent_datadog/conf.d/sep/win32_event_log.d/conf.yaml)
- - conf wmi : [conf.yaml](agent_datadog/conf.d/sep/wmi_check.d/conf.yaml)
- - conf service : [conf.yaml](agent_datadog/conf.d/sep/windows_service.d/conf.yaml)
+ - conf Event Viewer : [conf.yaml](agent_datadog/sep/win32_event_log.d/conf.yaml)
+ - conf wmi : [conf.yaml](agent_datadog/sep/wmi_check.d/conf.yaml)
+ - conf service : [conf.yaml](agent_datadog/sep/windows_service.d/conf.yaml)
  - conf script client : [custom_WinServMonitor.ps1](agent_datadog/checks.d/custom_WinServMonitor.ps1)  
  - conf script client : [custom_WinServMonitor.py](agent_datadog/checks.d/custom_WinServMonitor.py)   
- - conf script client : [custom_WinServMonitor.yaml](agent_datadog/conf.d/sep/custom_WinServMonitor.yaml) 
+ - conf script client : [custom_WinServMonitor.yaml](agent_datadog/sep/custom_WinServMonitor.yaml) 
  
  ## ETAPE 3 : VERIFICATION
 Pour vérifier le statut des intégrations d'un agent local, ou pour vérifier le bon fonctionnement de l'agent en général, saisir la commande suivante dans .cmd
@@ -130,7 +130,7 @@ Autre exemple :
 ```
 "C:\Program Files\Datadog\Datadog Agent\embedded\agent.exe" check custom_WinServMonitor
 ```
-Permet de vérifier que l'intégration [custom_WinServMonitor.yaml](agent_datadog/conf.d/sep/custom_WinServMonitor.yaml) fonctionne correctement
+Permet de vérifier que l'intégration [custom_WinServMonitor.yaml](agent_datadog/sep/custom_WinServMonitor.yaml) fonctionne correctement
 
 ## SUPERVISION SUR AZURE PaaS
 #### 1.1 - Azure backup 

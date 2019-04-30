@@ -2,7 +2,7 @@
 
 azSAKey="DefaultEndpointsProtocol=https;AccountName=cgghubdgconf01;AccountKey=zq/mRQumKZe/p5aUavFs23nvx/XdGhlXNT7KdH23yDEChN25d7PyodBDYGgp//ZmdjJztHrS3dWnBGucSgJnGQ==;EndpointSuffix=core.windows.net"
 ddShare="datadog"
-ddDir="TestPierre"
+ddDir="github"
 
 function_purge_dir () {
 	checkFolder=`az storage directory exists -s $ddShare/$ddDir -n $1  --connection-string $azSAKey --output tsv`

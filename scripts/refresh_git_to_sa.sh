@@ -4,7 +4,7 @@
 #SA : cgghubdgconf01
 azSAKey="DefaultEndpointsProtocol=https;AccountName=cgghubdgconf01;AccountKey=zq/mRQumKZe/p5aUavFs23nvx/XdGhlXNT7KdH23yDEChN25d7PyodBDYGgp//ZmdjJztHrS3dWnBGucSgJnGQ==;EndpointSuffix=core.windows.net"
 ddShare="datadog"
-ddDir="TestPierre"
+ddDir="github"
 tempDir="/tmp/tmpDirGit"
 gitRepo="https://github.com/deppierre/datadog"
 
@@ -18,11 +18,11 @@ function_github_sync () {
 #VERIFICATION DOSSIER GIT LOCAL
 if [ -d "$tempDir" ]
 then
-	echo "Temp dir :: $tempDir already exist"
+	echo "Local temp dir :: $tempDir already exist"
 	cd $tempDir
 	git pull
 else
-	echo "Temp dir :: $tempDir is missing"
+	echo "Local temp dir :: $tempDir is missing"
 	git clone $gitRepo $tempDir
 fi
 
