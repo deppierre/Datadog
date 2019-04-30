@@ -5,20 +5,20 @@ ddShare="datadog"
 ddDir="github"
 
 function_purge_dir () {
-	checkFolder=`az storage directory exists -s $ddShare/$ddDir -n $1  --connection-string $azSAKey --output tsv`
+	checkFolder=`az storage directory exists -s $ddShare -n $1 --connection-string $azSAKey --output tsv`
 	if [ "$checkFolder" = "True" ]
 	then
-		for dir in `az storage file list -s $ddShare/$ddDir/$1 --connection-string $azSAKey --output json | jq '.[] | select (.type == "dir") | .name' -r`; do
-			delDir=`az storage directory delete -s $ddShare/$ddDir/$1 -n $dir --connection-string $azSAKey --output tsv`
+		for dir in `az storage file list -s $ddShare/$1 --connection-string $azSAKey --output json | jq '.[] | select (.type == "dir") | .name' -r`; do
+			delDir=`az storage directory delete -s $ddShare -n $1/$dir --connection-string $azSAKey --output tsv`
 				if [ "$delDir" = "True" ]
 				then
-					echo "info: directory $1/$dir deleted"
+					echo "--info: directory $1/$dir deleted"
 				else
-					echo "error: directory $1/$dir not deleted"
+					echo "--error: directory $1/$dir not deleted"
 				fi
 		done
 	else
-		echo "info: directory $1 doesn't exist"
+		echo "--info: directory $1 doesn't exist"
 	fi
 }
 
@@ -27,25 +27,29 @@ function_purge_dir () {
 echo "info: clean all files"
 az storage file delete-batch -s $ddShare/$ddDir --pattern '*' --connection-string $azSAKey
 
-##FOLDER
-###AD
-function_purge_dir "conf.d/active_directory"
+#FOLDER
+##AD
+echo "-clean dir inside : $ddDir/active_directory"
+function_purge_dir "$ddDir/active_directory"
 ###DEFAULT
-function_purge_dir "conf.d/default"
+echo "-clean dir inside : $ddDir/default"
+function_purge_dir "$ddDir/default"
 ###IIS
-function_purge_dir "conf.d/iis"
+echo "-clean dir inside : $ddDir/iis"
+function_purge_dir "$ddDir/iis"
 ###sep
-function_purge_dir "conf.d/sep"
+echo "-clean dir inside : $ddDir/sep"
+function_purge_dir "$ddDir/sep"
 ###sqlserver
-function_purge_dir "conf.d/sqlserver"
+echo "-clean dir inside : $ddDir/sqlserver"
+function_purge_dir "$ddDir/sqlserver"
 ###wsus
-function_purge_dir "conf.d/wsus"
+echo "-clean dir inside : $ddDir/wsus"
+function_purge_dir "$ddDir/wsus"
 ###mab
-function_purge_dir "conf.d/mab"
+echo "-clean dir inside : $ddDir/mab"
+function_purge_dir "$ddDir/mab"
 
 #CONF
-function_purge_dir "conf.d"
-
-#ROOT
-az storage directory delete -s $ddShare/$ddDir -n conf.d --connection-string $azSAKey --output none
-az storage directory delete -s $ddShare/$ddDir -n checks.d --connection-string $azSAKey --output none
+echo "-clean dir inside : $ddDir"
+function_purge_dir "$ddDir"

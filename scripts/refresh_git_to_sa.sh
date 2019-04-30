@@ -32,7 +32,7 @@ checkFolder=`az storage directory exists -s $ddShare -n $ddDir --connection-stri
 if [ "$checkFolder" = "False" ]
 then
 	echo "Target dir :: $ddDir is missing"
-	az storage directory create -s $ddShare -n $ddDir --connection-string $azSAKey
+	az storage directory create -s $ddShare -n $ddDir --connection-string $azSAKey --output tsv
 	function_github_sync
 else
 	echo "Target dir :: $ddDir already exist"
