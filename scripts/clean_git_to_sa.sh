@@ -40,6 +40,8 @@ function_purge_dir "conf.d/sep"
 function_purge_dir "conf.d/sqlserver"
 ###wsus
 function_purge_dir "conf.d/wsus"
+###mab
+function_purge_dir "conf.d/mab"
 
 #CONF
 function_purge_dir "conf.d"
