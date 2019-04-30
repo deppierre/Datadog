@@ -1,11 +1,15 @@
 #!/bin/sh
 
 #INITIALISATION VARIABLES
+
+#!!A MODIFIER!!#
 azSAKey="/home/admin_pdepretz/clouddrive/storage_account_list.csv"
+gitRepo="https://github.com/deppierre/datadog"
+#!!!!!!!!!!!!!!#
+
 ddShare="datadog"
 ddDir="github"
 tempDir="/tmp/tmpDirGit"
-gitRepo="https://github.com/deppierre/datadog"
 
 #MAIN
 #VERIFICATION DOSSIER GIT LOCAL
@@ -28,7 +32,7 @@ then
 		if [ "$checkShare" = "False" ]
 		then
 			echo "Target share :: $ddShare is missing"
-			az storage share create --name $ddShare --quota 2048 --account-name $accName --account-key "$keyNum" --output tsv
+			az storage share create --name $ddShare --quota 2048 --account-name $accName --account-key "$keyNum" --output none
 		else
 			echo "Target share :: $ddShare already exist"
 		fi
@@ -38,7 +42,7 @@ then
 		if [ "$checkFolder" = "False" ]
 		then
 			echo "Target dir :: $ddDir is missing"
-			az storage directory create -s $ddShare -n $ddDir --account-name $accName --account-key "$keyNum" --output tsv
+			az storage directory create -s $ddShare -n $ddDir --account-name $accName --account-key "$keyNum" --output none
 		else
 			echo "Target dir :: $ddDir already exist"
 		fi
