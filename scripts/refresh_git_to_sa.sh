@@ -2,7 +2,7 @@
 
 #INITIALISATION VARIABLES
 #SA : cgghubdgconf01
-azSAKey="DefaultEndpointsProtocol=https;AccountName=cgghubdgconf01;AccountKey=zq/mRQumKZe/p5aUavFs23nvx/XdGhlXNT7KdH23yDEChN25d7PyodBDYGgp//ZmdjJztHrS3dWnBGucSgJnGQ==;EndpointSuffix=core.windows.net"
+azSAKey="<à modifier>"
 ddShare="datadog"
 ddDir="github"
 tempDir="/tmp/tmpDirGit"
