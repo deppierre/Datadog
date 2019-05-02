@@ -47,6 +47,7 @@
 
 # List of Services to Ignore. 
 $Ignore=@(
+    'Volume Shadow Copy',
     'Downloaded Maps Manager',
     'IaasVmProvider',
     'Microsoft .NET Framework NGEN v4.0.30319_X64', 
