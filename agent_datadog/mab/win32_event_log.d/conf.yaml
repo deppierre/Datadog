@@ -2,9 +2,27 @@
 init_config:
 instances:
   - log_file:
-      - DPM Backups Events
+      - DNS Server
+    tags:
+      - dnsserver
+      - os:windows
+    type:
+      - Warning
+      - Error
+ 
+  - log_file:
+      - DPM Backup Events
     tags:
       - DPM Backups Events
+      - os:windows
+    type:
+      - Warning
+      - Error
+
+  - log_file:
+      - DPM Alerts
+    tags:
+      - DPM Alerts
       - os:windows
     type:
       - Warning
