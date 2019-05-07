@@ -21,6 +21,8 @@ instances:
       - 1074
       - 1076
       - 7034
+      - 6013
+      - 109
 
   - log_file:
       - Security

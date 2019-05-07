@@ -63,6 +63,8 @@ instances:
       - 1074
       - 1076
       - 7034
+      - 6013
+      - 109
 logs:
   - type: windows_event
     channel_path: System
