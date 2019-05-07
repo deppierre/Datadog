@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #INITIALISATION
 az account clear

@@ -12,6 +12,15 @@ instances:
       - 1074
       - 1076
       - 7034
+      
+  - log_file:
+      - Web Server (IIS)
+    tags:
+      - iis
+      - os:windows
+    type:
+      - Warning
+      - Error
 
   - log_file:
       - Security
@@ -31,3 +40,16 @@ logs:
     source: System
     service: Events_System
     sourcecategory: windowsevent
+
+  - type: file
+    path: C:\Windows\System32\LogFiles\HTTPERR\*.log
+    service: HTTPERR
+    source: IIS_HTTPERR
+
+  - type: file
+    path: C:\inetpub\logs\LogFiles\W3SVC*\*.log
+    service: IISLOG
+    source: IIS_ERRLOG
+
+
+
