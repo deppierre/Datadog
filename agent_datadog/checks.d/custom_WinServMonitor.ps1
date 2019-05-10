@@ -83,7 +83,7 @@ $IgnoreGlobal=@(
     'Remote Registry';
 )
 #Global filter
-$filter="NOT DisplayName like 'Sync Host%'";
+$filter="NOT DisplayName LIKE 'Sync Host%' AND NOT DisplayName LIKE 'CDPUserSvc%'";
 
 $pattern = "has not registered for any start or stop triggers"
 $flag = $false
