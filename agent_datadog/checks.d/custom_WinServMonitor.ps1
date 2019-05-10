@@ -44,9 +44,31 @@
 # of this script, the vbscript/wsf version was a vbscript learning 
 # experience for myself and the basis of my vbscripts to follow. 
 # ----------------------------------------------------------------------- 
+# 30/04/2019 - CFR(Easyteam) - Adding the server exclusion list
+# 10/05/2019 - CFR(Easyteam) - Add the uptime check (exit if less than 10 minutes)
+# -----------------------------------------------------------------------
 
-# List of Services to Ignore. 
-$Ignore=@(
+#Uptime check
+$os = Get-WmiObject win32_operatingsystem
+$uptime = ((Get-Date) - ($os.ConvertToDateTime($os.lastbootuptime))).TotalMinutes
+if ($uptime -lt 10)
+	{
+	write-host 'OK - All automatic started services are running' 
+    exit 0
+	}
+
+
+#get servername
+$ServerName = $env:COMPUTERNAME
+
+#set dedicated exclusion list for each server
+$IgnoreSpec = switch -exact ($ServerName) {
+    "ServernameXXX" {
+        ''       
+    }
+}
+# List of Global Services to Ignore. 
+$IgnoreGlobal=@(
     'Volume Shadow Copy',
     'Downloaded Maps Manager',
     'IaasVmProvider',
@@ -60,11 +82,17 @@ $Ignore=@(
     'TPM Base Services',
     'Remote Registry';
 )
+#Global filter
+$filter="NOT DisplayName like 'Sync Host%'";
+
 $pattern = "has not registered for any start or stop triggers"
 $flag = $false
+
+#concatanation
+$ExcludeList = $IgnoreGlobal + $IgnoreSpec
+
 # Get list of services that are not running, not in the ignore list and set to automatic 
-$Services=Get-WmiObject Win32_Service -Filter "NOT DisplayName like 'Sync Host%'"| Where {$_.StartMode -eq 'Auto' -and $Ignore -notcontains $_.DisplayName -and $_.State -ne 'Running'} 
- 
+$Services=Get-WmiObject Win32_Service -Filter $filter| Where {$_.StartMode -eq 'Auto' -and $ExcludeList -notcontains $_.DisplayName -and $_.State -ne 'Running'} 
 # If any services were found fitting the above description... 
 if ($Services) {
     try{
