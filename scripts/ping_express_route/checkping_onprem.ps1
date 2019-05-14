@@ -14,7 +14,9 @@
 # valeurs par défaut
 Param (
     [string]$servers = "192.168.21.100,192.168.202.33",
+	#/!\ API Key A REMPLACER /!\
     [string]$APIKey = "67XXXXXXXXXXXXXXXXXXXXXXXXXXXXc5"
+	#/!\
  )
 
 # function API Datadog
