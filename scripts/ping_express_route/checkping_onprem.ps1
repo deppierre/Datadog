@@ -13,8 +13,8 @@
 
 # valeurs par défaut
 Param (
-    [string]$servers = "192.168.21.100,192.168.202.99",
-    [string]$APIKey = "5321dfc8ff286241945c10c6f21e40fe"
+    [string]$servers = "192.168.21.100,192.168.202.33",
+    [string]$APIKey = "67XXXXXXXXXXXXXXXXXXXXXXXXXXXXc5"
  )
 
 # function API Datadog
