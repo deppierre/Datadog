@@ -36,7 +36,7 @@ function eventDatadog([string]$APIKey, [string]$server, [string]$type, [single]$
 		# envoi des data via API Datadog
 		$dateOfTheDay = Get-Date -Format yyyy/MM/dd-HH:mm
 		if ($type -eq "Warning") {
-			$text = "PING TIMEOUT FROM AZURE -> ONPREM (IP :: $server - TIMESTAMP :: $dateOfTheDay - AVERAGERESPONSETIME :: $averageResponseTime)"
+			$text = "PING TIMEOUT FROM AZURE -> ONPREM (IP :: $server - TIMESTAMP :: $dateOfTheDay - AVERAGERESPONSETIME :: $averageResponseTime ms)"
 		} else {
 			$text = "PING FAILED FROM AZURE -> ONPREM (IP :: $server - TIMESTAMP :: $dateOfTheDay)"
 		}
