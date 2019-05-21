@@ -38,6 +38,9 @@ if(Test-Path $tempDir){
 			Add-Type -assembly "system.io.compression.filesystem"
 			[io.compression.zipfile]::ExtractToDirectory($newLivraison, $tempDir)
 			
+			$dateOfTheDay = Get-Date -Format yyyy_MM_ddHHmmss
+			Rename-Item -Path $newLivraison -NewName "old_livraison_$dateOfTheDay.zip"
+			
 			# CHECK AZ Storage Account
 			if(Test-Path $azSAKey){
 				Write-Host "Information :: AZ Storage account file :: $azSAKey"
