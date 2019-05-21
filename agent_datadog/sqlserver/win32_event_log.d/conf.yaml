@@ -33,6 +33,15 @@ instances:
       - Application
     event_id:
       - 18456
+      
+  - log_file:
+      - Web Server (IIS)
+    tags:
+      - iis
+      - os:windows
+    type:
+      - Warning
+      - Error
 
 logs:
   - type: windows_event
@@ -42,6 +51,16 @@ logs:
     sourcecategory: windowsevent
 
   - type: file
-    path: C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Log\ERRORLOG
+    path: C:\Program Files\Microsoft SQL Server\*MSSQLSERVER*\*\Log\ERRORLOG
     service: MSSQL_ERRORLOG
     source: MSSQL_ERRORLOG
+    
+  - type: file
+    path: C:\Windows\System32\LogFiles\HTTPERR\*.log
+    service: HTTPERR
+    source: IIS_HTTPERR
+
+  - type: file
+    path: C:\inetpub\logs\LogFiles\W3SVC*\*.log
+    service: IISLOG
+    source: IIS_ERRLOG
