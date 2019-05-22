@@ -1,0 +1,66 @@
+---
+init_config:
+instances:
+  - log_file:
+      - System
+    tags:
+      - system
+    event_id:
+      - 1001
+      - 41
+      - 6008
+      - 1074
+      - 1076
+      - 7034
+      - 6013
+      - 109
+      - 13
+
+  - log_file:
+      - Security
+    type:
+      - Information
+    event_id:
+      - 4740
+      - 4728
+      - 4732
+      - 4735
+      - 4756
+      - 4625
+      - 4648
+
+  - log_file:
+      - Application
+    event_id:
+      - 18456
+      
+  - log_file:
+      - Web Server (IIS)
+    tags:
+      - iis
+      - os:windows
+    type:
+      - Warning
+      - Error
+
+logs:
+  - type: windows_event
+    channel_path: System
+    source: System
+    service: Events_System
+    sourcecategory: windowsevent
+
+  - type: file
+    path: C:\Program Files\Microsoft SQL Server\*MSSQLSERVER*\*\Log\ERRORLOG
+    service: MSSQL_ERRORLOG
+    source: MSSQL_ERRORLOG
+    
+  - type: file
+    path: C:\Windows\System32\LogFiles\HTTPERR\*.log
+    service: HTTPERR
+    source: IIS_HTTPERR
+
+  - type: file
+    path: C:\inetpub\logs\LogFiles\W3SVC*\*.log
+    service: IISLOG
+    source: IIS_ERRLOG
