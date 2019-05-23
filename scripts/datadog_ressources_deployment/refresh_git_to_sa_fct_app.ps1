@@ -11,8 +11,6 @@ $azSAKey = "D:\home\site\wwwroot\HttpTrigger1\storage_account_list.csv"
 $tempDir = "D:\home\site\wwwroot\HttpTrigger1\temp"
 
 if(Test-Path $azSAKey){
-	Write-Host "Information :: AZ Storage account file :: $azSAKey"
-
     # Lecture du fichier AzSA
 	Get-Content $azSAKey | ForEach-Object {
 
