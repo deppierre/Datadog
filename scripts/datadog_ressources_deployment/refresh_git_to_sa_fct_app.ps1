@@ -7,6 +7,8 @@ param($Request, $TriggerMetadata)
 $gitRepo="https://github.com/deppierre/datadog"
 $ddShare = "datadog"
 $ddDir = "github"
+
+# Local temp
 $azSAKey = "D:\home\site\wwwroot\HttpTrigger1\storage_account_list.csv"
 $tempDir = "D:\home\site\wwwroot\HttpTrigger1\temp"
 
